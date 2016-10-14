@@ -1,0 +1,32 @@
+<view class="container-main">
+  
+  <scroll-view class="article-list" style="height:100%" scroll-y="true" bindscrolltolower="lower">
+    <block wx:for="{{articleList}}">
+      <view class="list-item" index="{{index}}" id="{{item.articleID}}" data-title="{{item.title}}" catchtap="toDetail">
+       
+       <view class="title">
+          <view class="title-name">{{item.title}}</view>          
+        </view>
+       
+        <view class="article-title">{{item.summary}}</view>
+        <view class="bar-container">
+
+          <view class="create-time">{{item.createTime}}</view>
+
+          <view class="bar-item">
+            <image class="bar-item-icon" src="/images/icon/reply.png"></image>
+            <view class="bar-item-number">{{item.supported}}</view>
+          </view>
+          <view class="bar-item">
+            <image class="bar-item-icon" src="/images/icon/visit.png"></image>
+            <view class="bar-item-number">{{item.readNumber}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <loading hidden="{{hidden}}">
+    拼命加载中...
+  </loading>
+</view>

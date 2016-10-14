@@ -1,0 +1,34 @@
+<!--logs.wxml-->
+<view class="container log-list">
+ <scroll-view  style="height:100%" scroll-y="true" bindscrolltolower="lower">
+    <block wx:for="{{list}}">
+      <view class="posts-item" index="{{index}}" id="{{item.articleID}}" data-title="{{item.title}}" catchtap="toDetail">
+       
+       <view class="author">
+          <image class="author-avatar" src="{{item.pic_small}}" style="border-radius:10px;"></image>
+          <view class="title-name">{{item.title}}</view>
+          
+        </view>
+       
+        <view class="posts-title">{{item.author}}</view>
+        <view class="bar-info">
+
+          <view class="create-time">{{item.createTime}}</view>
+
+          <view class="bar-info-item">
+            
+            <view class="bar-info-item-number">{{item.hot}}</view>
+          </view>
+          <view class="bar-info-item">
+            
+            <view class="bar-info-item-number">{{item.language}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>

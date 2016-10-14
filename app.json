@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+     "pages/detail/detail",
+     "pages/music/music"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "16web博客",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "color":"#272636",
+    "selectedColor":"black",
+    "backgroundColor":"#fff",
+    "borderStyle":"white",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"热门",
+      "iconPath":"images/tabBar/hot0.png",
+      "selectedIconPath":"images/tabBar/hot.png"
+    },
+    {
+      "pagePath":"pages/index/index",
+      "text":"最新",
+      "iconPath":"images/tabBar/list0.png",
+      "selectedIconPath":"images/tabBar/list.png"
+    },
+    {
+      "pagePath":"pages/music/music",
+      "text":"音乐",
+      "iconPath":"images/tabBar/oo.png",
+      "selectedIconPath":"images/tabBar/o.png"
+    }]
+  }
+}

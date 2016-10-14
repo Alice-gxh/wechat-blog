@@ -1,0 +1,15 @@
+<!--logs.wxml-->
+<view class="container">
+
+<view class="detail-main">
+  <view class="title">
+    {{title}}
+  </view>
+  <view  class="content">
+    {{content}}
+  </view>
+   <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
+</view>
